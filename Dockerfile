@@ -23,9 +23,9 @@ RUN adduser -u 2000 -G root -D blue \
 	&& chown -R 2000:0 $APP_HOME
 
 # Install Dependencies
-#USER 2000
+USER 2000
 RUN npm install
-#USER 0
+USER 0
 
 COPY startup.sh startup.sh
 COPY StoreWebApp ./
@@ -37,7 +37,7 @@ RUN chown -R 2000:0 $APP_HOME
 RUN apk del git less openssh
 
 # Switch back to non-root
-#USER 2000
+USER 2000
 
 EXPOSE 8000 9000
 ENTRYPOINT ["./startup.sh"]
