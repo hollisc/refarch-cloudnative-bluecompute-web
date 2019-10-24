@@ -25,7 +25,7 @@ RUN adduser -u 2000 -G root -D blue \
 # Install Dependencies
 #USER 2000
 RUN npm install
-RUN bower install
+RUN ./node_modules/.bin/bower install 
 #USER 0
 
 COPY startup.sh startup.sh
