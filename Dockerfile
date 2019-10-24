@@ -37,7 +37,7 @@ RUN chown -R 2000:0 $APP_HOME
 RUN apk del git less openssh
 
 # Switch back to non-root
-USER 2000
+#USER 2000
 
 EXPOSE 8000 9000
 ENTRYPOINT ["./startup.sh"]
