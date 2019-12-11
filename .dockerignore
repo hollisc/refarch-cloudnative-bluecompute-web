@@ -1,5 +1,0 @@
-/StoreWebApp/node_modules
-/StoreWebApp/public/resources/bower_components
-
-# Config files
-/StoreWebApp/config/default.json.*
